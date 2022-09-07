@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Zodiac sign </title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<form class="subscription" onsubmit="showZodiac()" action="javascript:void(0);">
+				<input class="add-date" type="text" placeholder="Enter Your DOB" id="date1">
+				<br />
+				<input class="add-month" type="text" placeholder="Enter Your DOB" id="month1">
+				<br />
+				<input type="submit" value="Show Zodiac">
+			</form>
+		</div>
+	</div>
+	<div class="showResult">
+
+		<h2 class="heading" id="showData" style="text-transform: uppercase"> </h2>
+
+	</div>
+	<script>
+		function showZodiac() {
+
+			const data = document.getElementById('date1').value;
+			const month = document.getElementById('month1').value;
+			const res = document.getElementById('showData');
+			console.log(data)
+
+			if (data <= 31 && data >= 1) {
+				if ((month == 3 && data >= 21) || (month == 4 && data <= 19)) {
+					res.innerHTML = " your zodiac sign is Aries";
+				}
+
+				else if ((month == 4 && data >= 20) || (month == 5 && data <= 20)) {
+					res.innerHTML = " your zodiac sign is Taurus";
+				}
+
+				else if ((month == 5 && data >= 21) || (month == 6 && data <= 21)) {
+					res.innerHTML = " your zodiac sign is Gemini";
+				}
+
+				else if ((month == 6 && data >= 22) || (month == 7 && data <= 22)) {
+					res.innerHTML = " your zodiac sign is Cancer";
+				}
+
+				else if ((month == 7 && data >= 23) || (month == 8 && data <= 22)) {
+					res.innerHTML = " your zodiac sign is Leo";
+				}
+
+				else if ((month == 8 && data >= 23) || (month == 9 && data <= 22)) {
+					res.innerHTML = " your zodiac sign is Virgo";
+				}
+
+				else if ((month == 9 && data >= 23) || (month == 10 && data <= 23)) {
+					res.innerHTML = " your zodiac sign is Libra";
+				}
+
+				else if ((month == 10 && data >= 24) || (month == 11 && data <= 22)) {
+					res.innerHTML = " your zodiac sign is Scorpio";
+				}
+
+				else if ((month == 11 && data >= 23) || (month == 12 && data <= 21)) {
+					res.innerHTML = " your zodiac sign is Sagittarius";
+				}
+
+				else if ((month == 12 && data >= 22) || (month == 1 && data <= 19)) {
+					res.innerHTML = " your zodiac sign is Capricorn";
+				}
+
+				else if ((month == 1 && data >= 20) || (month == 2 && data <= 18)) {
+					res.innerHTML = " your zodiac sign is Aquarius";
+				}
+
+				else if ((month == 2 && data >= 19) || (month == 3 && data <= 20)) {
+					res.innerHTML = " your zodiac sign is Pisces";
+				}
+			}
+			else {
+				res.innerHTML = "Invalid Data";
+			}
+		}
+	</script>
+</body>
+</html>
